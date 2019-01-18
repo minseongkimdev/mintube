@@ -1,0 +1,13 @@
+header.header
+    .header__columm
+        a(href=routes.home)
+            i.fab.fa-youtube
+    .header__column
+        form(action = routes.search, method ="get")
+            input(type = "text",placeholder="검색어를 입력하세요.",name = "term")
+    .header__columm
+        ul
+            li 
+                a(href=routes.join) Join
+            li 
+                a(href=routes.login) Log In
