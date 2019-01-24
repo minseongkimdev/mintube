@@ -17,7 +17,7 @@ export const videos = [
         title: "Video super",
         description: "This is something I love",
         views: 24,
-        videoFile: "",
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 123123123,
             name: "Kimminseong",
@@ -30,7 +30,7 @@ export const videos = [
         title: "Video hello",
         description: "This is something I love",
         views: 24,
-        videoFile: "",
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 123123123,
             name: "Kimminseong",
@@ -43,7 +43,7 @@ export const videos = [
         title: "Video hi",
         description: "This is something I love",
         views: 24,
-        videoFile: "",
+        videoFile: "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
         creator: {
             id: 123123123,
             name: "Kimminseong",
