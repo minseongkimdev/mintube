@@ -2,9 +2,10 @@ extends layouts/main
 
 block content
     .from-contaniner
-        form(action=`videos$(routes.upload}`, method = "post")
-            label(for="file") Video File
-            input(tpye="file",id = "file", name="file",required = true)
+        form(action=`/videos${routes.upload}`, method = "post", enctype = "multipart/form-data")
+            div.fileUpload
+                label(for="file") Video File
+                input(type="file", id = "file", name="videoFile",required = true, accept = "video/*")
             input(type="text", palaceholder = "Title", name = "title",required = true)
-            textarea(name = "description", palaceholder = "Description")
+            textarea(name = "description", palaceholder = "Description", required = true)
             input(type = "submit", value="Upload Video")
