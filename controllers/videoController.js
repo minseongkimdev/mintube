@@ -1,9 +1,11 @@
-
 import routes from "../routes";
-export const home = (req, res) => res.render("home", {
-    pageTitle: "Home",
-    videos
-});
+import Video from "../models/Video";
+export const home = async(req, res) => {
+
+    const videos = await Video.find({});
+    res.render("home", {pageTitle : "Home",videos});
+};
+
 
 export const search = (req, res) => {
     const {
@@ -34,7 +36,7 @@ export const postUpload = (req, res) => {
             file,
             title,
             descriptiuon
-        } 
+        }
         // To Do : Upload and save video
 
     } = req;
