@@ -5,14 +5,17 @@ export const home = async (req, res) => {
         const videos = await Video.find({});
         res.render("home", {
             pageTitle: "Home",
-            videos});
-    } catch(error) {
+            videos
+        });
+    } catch (error) {
         console.log(error);
+        res.render("home", {
+            pageTitle: "Home",
+            videos : []
+        });
     }
-    res.render("home", {
-        pageTitle: "Home",
-        videos});
     
+
 };
 
 
@@ -39,17 +42,21 @@ export const getUpload = (req, res) => {
 
 };
 
-export const postUpload = (req, res) => {
+export const postUpload = async (req, res) => {
     const {
-        body: {
-            file,
-            title,
-            descriptiuon
-        }
-        // To Do : Upload and save video
+        body : {title, description},
+        file : {path}
 
     } = req;
-    res.redirect(routes.videoDetail(324393));
+    // To Do : Upload and save video
+    const newVideo = await Video.create( {
+        fileUrl : path,
+        title,
+        description
+    });
+    console.log(newVideo)
+    // res.render("upload", {pageTitle : "Upload"});
+    res.redirect(routes.videoDetail(newVideo.id));
 
 };
 export const videoDetail = (req, res) => res.render("videoDetail", {
