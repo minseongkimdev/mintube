@@ -1,5 +1,6 @@
-import routes from "../routes"
-import Video from "../models/Video"
+import routes from "../routes";
+import Video from "../models/Video";
+import Comment from "../models/Comment";
 
 // Home
 
@@ -87,6 +88,7 @@ export const videoDetail = async (req, res) => {
     } = req
     try {
         const video = await Video.findById(id)
+            .populate("comment");
         res.render("videoDetail", {
             pageTitle: video.title,
             video
