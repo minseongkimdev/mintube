@@ -82,3 +82,6 @@ typings/
 package-lock.json
 
 uploads
+.eslintrc.js
+.eslintrc.js
+static
