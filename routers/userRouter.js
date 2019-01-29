@@ -25,4 +25,3 @@ userRouter.get(routes.editProfle, editProfle);
 userRouter.get(routes.changePassword, changePassword);
 
 export default userRouter;
-

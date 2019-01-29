@@ -4,6 +4,8 @@ block content
     .search__header
         h3 Searching for #{searchingBy}
     .search_videos
+        if videos.length === 0 
+            h5 비디오를 찾지 못하였습니다.
         each item in videos
             +videoBlock({
                 title : item.title,

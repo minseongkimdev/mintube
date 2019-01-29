@@ -46,20 +46,20 @@ const routes = {
         }
     },
     editVideo: id => {
-        if(id) {
+        if (id) {
             return `/videos/${id}/edit`;
-        }else{
+        } else {
             return EDIT_VIDEO;
         }
     },
-    deleteVideo : id => {
-        if(id) {
+    deleteVideo: id => {
+        if (id) {
             return `/videos/${id}/delete`;
-        }else {
+        } else {
             return DELETE_VIDEO;
         }
     }
-    
+
 };
 
 export default routes;

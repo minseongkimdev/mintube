@@ -22,10 +22,9 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-    "dev:server": "nodemon --exec babel-node init.js --delay 2",
+    "start": "nodemon --exec babel-node init.js --delay 2",
     "dev:assets": "WEBPACK_ENV=develpment webpack",
     "build:assets": "WEBPACK_ENV=production webpack"
-
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^13.1.0",
