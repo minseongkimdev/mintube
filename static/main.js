@@ -105,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./assets/scss/styles.scss?");
+eval("throw new Error(\"Module build failed (from ./node_modules/extract-text-webpack-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\\n\\n    color: $black;\\n          ^\\n      Undefined variable: \\\"$black\\\".\\n      in /Users/gimminseong/Documents/mintube/assets/scss/main.scss (line 8, column 12)\\n    at runLoaders (/Users/gimminseong/Documents/mintube/node_modules/webpack/lib/NormalModule.js:301:20)\\n    at /Users/gimminseong/Documents/mintube/node_modules/loader-runner/lib/LoaderRunner.js:367:11\\n    at /Users/gimminseong/Documents/mintube/node_modules/loader-runner/lib/LoaderRunner.js:233:18\\n    at context.callback (/Users/gimminseong/Documents/mintube/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\\n    at Object.render [as callback] (/Users/gimminseong/Documents/mintube/node_modules/sass-loader/lib/loader.js:52:13)\\n    at Object.done [as callback] (/Users/gimminseong/Documents/mintube/node_modules/neo-async/async.js:8077:18)\\n    at options.error (/Users/gimminseong/Documents/mintube/node_modules/node-sass/lib/index.js:294:32)\");\n\n//# sourceURL=webpack:///./assets/scss/styles.scss?");
 
 /***/ }),
 
