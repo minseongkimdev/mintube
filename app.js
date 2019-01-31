@@ -3,6 +3,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+import passport from "passport";
 import {
     localsMiddleware,
     localMiddleware
@@ -24,6 +25,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(morgan("dev"));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 app.use(localMiddleware);
