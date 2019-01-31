@@ -23,14 +23,16 @@ export const postJoin = async (req, res) => {
         })
     } else {
         try {
-            const user = await User.create({
+            const user = await User({
                 name,
                 email
             })
             await User.register(user, password)
-            next()
+            next();
         } catch (error) {
             console.log(error)
+            res.redirect(routes.home);
+
         }
 
         // To Do : Register User
@@ -42,9 +44,9 @@ export const getLogin = (req, res) =>
     res.render("login", {
         pageTitle: "Log in"
     })
-export const postLogin = passport.authenticate('local', {
+export const postLogin = passport.authenticate("local", {
     failureRedirect: routes.login,
-    successRedirect: routes.heme
+    successRedirect: routes.home
 });
 export const logout = (req, res) => {
     // To Do : Process Log Out
