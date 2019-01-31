@@ -1,5 +1,7 @@
-import routes from "../routes"
-import User from "../models/User"
+import routes from "../routes";
+import User from "../models/User";
+import passport from "passport";
+
 export const getJoin = (req, res) => {
     res.render("join", {
         pageTitle: "Join"
@@ -40,9 +42,10 @@ export const getLogin = (req, res) =>
     res.render("login", {
         pageTitle: "Log in"
     })
-export const postLogin = (req, res) => {
-    res.redirect(routes.home)
-}
+export const postLogin = passport.authenticate('local', {
+    failureRedirect: routes.login,
+    successRedirect: routes.heme
+});
 export const logout = (req, res) => {
     // To Do : Process Log Out
     res.redirect(routes.home)
