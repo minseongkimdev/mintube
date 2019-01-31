@@ -16,6 +16,5 @@ UserSchema.plugin(passportLocalMongoose, {
 
 const model = mongoose.model("User", UserSchema);
 
-// UserSchema.
 
 export default model;
