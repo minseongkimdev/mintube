@@ -8,7 +8,7 @@ const multerVideo = multer({
 export const localMiddleware = (req, res, next) => {
     res.locals.siteName = "MinTube";
     res.locals.routes = routes;
-    res.locals.user = req.user;
+    res.locals.user = req.user || {};
     next();
 };
 
