@@ -9,6 +9,7 @@ export const localMiddleware = (req, res, next) => {
     res.locals.siteName = "MinTube";
     res.locals.routes = routes;
     res.locals.user = req.user || {};
+    console.log(req.user);
     next();
 };
 
