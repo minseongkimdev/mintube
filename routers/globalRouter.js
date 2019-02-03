@@ -14,6 +14,9 @@ import {
 
 const globalRouter = express.Router();
 
+import {
+    onlyPublic
+} from "../middlewares"
 globalRouter.get(routes.join, onlyPublic, getJoin);
 globalRouter.post(routes.join, onlyPublic, postJoin, postLogin);
 
