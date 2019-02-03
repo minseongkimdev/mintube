@@ -1,6 +1,9 @@
 import multer from "multer";
 
 import routes from "./routes";
+import {
+    resolveMx
+} from "dns";
 
 const multerVideo = multer({
     dest: "uploads/videos/"
@@ -18,6 +21,14 @@ export const onlyPublic = (req, res, next) => {
         res.redirect(routes.home);
     } else {
         next();
+    }
+}
+
+export const onlyPrivate = (req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect(routes.home);
     }
 }
 
