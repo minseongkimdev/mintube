@@ -72,3 +72,8 @@ export const changePassword = (req, res) =>
     res.render("changePassword", {
         pageTitle: "Change Password"
     })
+
+export const postGithubLogin = (req, res) => {
+    res.send(routes.home);
+
+}
