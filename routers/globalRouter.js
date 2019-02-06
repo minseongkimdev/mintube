@@ -19,7 +19,8 @@ import {
 const globalRouter = express.Router();
 
 import {
-    onlyPublic
+    onlyPublic,
+    onlyPrivate
 } from "../middlewares"
 globalRouter.get(routes.join, onlyPublic, getJoin);
 globalRouter.post(routes.join, onlyPublic, postJoin, postLogin);
@@ -32,7 +33,7 @@ globalRouter.post(routes.login, onlyPublic, postLogin);
 
 globalRouter.get(routes.home, home);
 globalRouter.get(routes.search, search);
-globalRouter.get(routes.logout, onlyPublic, logout);
+globalRouter.get(routes.logout, onlyPrivate, logout);
 
 
 globalRouter.get(routes.gitHub, githubLogin);
