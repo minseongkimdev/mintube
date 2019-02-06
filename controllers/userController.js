@@ -7,6 +7,9 @@ export const getJoin = (req, res) => {
         pageTitle: "Join"
     })
 }
+export const githubLogin = passport.authenticate("local", {
+
+})
 export const postJoin = async (req, res) => {
     const {
         body: {
