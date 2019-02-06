@@ -7,9 +7,7 @@ export const getJoin = (req, res) => {
         pageTitle: "Join"
     })
 }
-export const githubLogin = passport.authenticate("local", {
-
-})
+export const githubLogin = passport.authenticate("github");
 export const postJoin = async (req, res) => {
     const {
         body: {
@@ -52,7 +50,7 @@ export const postLogin = passport.authenticate("local", {
     successRedirect: routes.home
 });
 export const logout = (req, res) => {
-    req.logout();
+    res.logout();
     // To Do : Process Log Out
     res.redirect(routes.home)
 }
