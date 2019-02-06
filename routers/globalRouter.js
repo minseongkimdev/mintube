@@ -9,7 +9,8 @@ import {
     postJoin,
     getLogin,
     postLogin,
-    logout
+    logout,
+    githubLogin
 } from "../controllers/userController";
 
 const globalRouter = express.Router();
@@ -30,4 +31,6 @@ globalRouter.get(routes.home, home);
 globalRouter.get(routes.search, search);
 globalRouter.get(routes.logout, onlyPublic, logout);
 
+
+globalRouter.get(routes.github, githubLogin);
 export default globalRouter;
