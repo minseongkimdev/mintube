@@ -40,7 +40,21 @@ export const postJoin = async (req, res) => {
         // To do : Log user in
     }
 }
-export const githubLoginCallback = (res, req) => (accessToken, refreshToken, profile, cb)
+export const githubLoginCallback = async (accessToken, refreshToken, profile, cb) => {
+    const {
+        _json: {
+            id,
+            avatar_url,
+            name,
+            email
+        }
+    } = profile;
+    try {
+
+    } catch (error) {
+
+    }
+};
 export const getLogin = (req, res) =>
     res.render("login", {
         pageTitle: "Log in"
